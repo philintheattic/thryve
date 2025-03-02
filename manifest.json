@@ -2,7 +2,7 @@
     "name": "Daily Notes",
     "short_name": "Notes",
     "description": "A simple daily notes app with a pastel theme.",
-    "start_url": "/index.html",
+    "start_url": "index.html",
     "display": "standalone",
     "background_color": "#FFFAF3",
     "theme_color": "#EAE0DA",
