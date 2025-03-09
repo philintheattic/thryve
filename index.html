@@ -638,14 +638,14 @@ input[type="checkbox"] {
                 }
             });
             
-            resetItemsBtn.addEventListener('click', () => {
-                if (confirm('Reset all items to default? This will remove all custom items.')) {
-                    localStorage.removeItem('customItems');
-                    customItems = [];
-                    renderCustomCheckboxes();
-                    renderDefaultCheckboxes();
-                }
-            });
+            // resetItemsBtn.addEventListener('click', () => {
+            //     if (confirm('Reset all items to default? This will remove all custom items.')) {
+            //         localStorage.removeItem('customItems');
+            //         customItems = [];
+            //         renderCustomCheckboxes();
+            //         renderDefaultCheckboxes();
+            //     }
+            // });
 
             // Functions for custom items
             function addCustomItem() {

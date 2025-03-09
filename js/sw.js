@@ -1,4 +1,4 @@
-const CACHE_NAME = "daily-notes-cache-v1";
+const CACHE_NAME = "thryve-cache-v1";
 const ASSETS_TO_CACHE = [
   "/",
   "/index.html",
