@@ -1,10 +1,10 @@
 const CACHE_NAME = "thryve-cache-v1";
 const ASSETS_TO_CACHE = [
   "/",
-  "/index.html",
-  "/css/styles.css",
-  "/js/script.js",
-  "/manifest.json",
+  "index.html",
+  "css/styles.css",
+  "js/script.js",
+  "manifest.json",
 ];
 
 // Install Service Worker & Cache Files
