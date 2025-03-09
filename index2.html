@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Notes</title>
+    <link rel="icon" type="image/png" href="static/icon-192.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="content">
+            <h1>Daily Notes</h1>
+
+            <div id="tracking-tab" class="tab-content">
+                <div class="calendar-header">
+                    <button id="prevMonth">&lt;</button>
+                    <h2 id="currentMonth"></h2>
+                    <button id="nextMonth">&gt;</button>
+                </div>
+                <div id="calendar"></div>
+                <p id="selectedDateDisplay"></p>
+
+                <label for="painScale">Pain Level:</label>
+                <select id="painScale">
+                    <option value="1">1 - Minimal</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 - Moderate</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10 - Extreme</option>
+                </select>
+
+                <textarea id="noteInput" placeholder="Write your note here..."></textarea>
+                <button id="saveBtn">Save Note</button>
+                <p id="status"></p>
+
+            </div>
+
+            <div id="stats-tab" class="tab-content">
+                <h2>Pain Level Over Time</h2>
+                <canvas id ="painChart"></canvas>
+            </div>
+
+            <div id="checkbox-tab" class="tab-content">
+                <iframe src="checkbox.html"></iframe>
+            </div>
+
+            <div id="settings-tab" class="tab-content">
+                Hier sind Settings
+            </div>
+
+        </div>
+         
+    </div>
+
+    <div id="tab-bar">
+        <button class="tab-button active" onclick="switchTab('tracking')">Tracking</button>
+        <button class="tab-button" onclick="switchTab('stats')">Stats</button>
+        <button class="tab-button" onclick="switchTab('checkbox')">Tracking+</button>
+        <button class="tab-button" onclick="switchTab('settings')">Settings</button>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

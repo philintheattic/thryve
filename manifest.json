@@ -1,11 +1,11 @@
 {
-    "name": "Daily Notes",
-    "short_name": "Notes",
+    "name": "Thryve",
+    "short_name": "Thryve",
     "description": "A simple daily notes app with a pastel theme.",
     "start_url": "index.html",
     "display": "standalone",
-    "background_color": "#FFFAF3",
-    "theme_color": "#EAE0DA",
+    "background_color": "#a7cecb",
+    "theme_color": "#a7cecb",
     "icons": [
       {
         "src": "static/icon-192.png",
