@@ -34,8 +34,25 @@ document.addEventListener("DOMContentLoaded", function () {
         const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
         const monthNames = ["January", "February", "March", "April", "May", "June", 
                             "July", "August", "September", "October", "November", "December"];
+        const weekdayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    
         currentMonthDisplay.textContent = `${monthNames[currentMonth]} ${currentYear}`;
 
+        // Create Weekday row
+        const weekdayRow = document.createElement("div");
+        weekdayRow.classList.add("weekday-row");
+
+        weekdayNames.forEach(day => {
+            const dayHeader = document.createElement("div");
+            dayHeader.classList.add("weekday");
+            dayHeader.textContent = day;
+            weekdayRow.appendChild(dayHeader);
+        });
+
+        // TODO: Needs further refining so that the layout doesn't break
+        // calendar.appendChild(weekdayRow);
+
+        // Add empty cells for first day offset
         for (let i = 0; i < firstDayOfMonth; i++) {
             const emptyCell = document.createElement("div");
             calendar.appendChild(emptyCell);

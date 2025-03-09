@@ -37,9 +37,13 @@
 }
 
 
-
+html{
+    margin: 0;
+    padding:0cm 0;
+}
 
 body {
+    height: 100vh;
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: Arial, sans-serif;
@@ -48,8 +52,8 @@ body {
 }
 
 .container {
-    max-width: 400px;
-    margin: auto;
+    max-width: 350px;
+    margin: 0 auto;
 }
 
 .calendar-header {
@@ -69,6 +73,19 @@ button {
     grid-template-columns: repeat(7, 1fr);
     gap: 5px;
     margin-bottom: 10px;
+}
+
+.weekday-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: bold;
+    text-align: center;
+    padding: 5px 0;
+    background-color: #f0f0f0;
+}
+
+.weekday {
+    padding: 5px;
 }
 
 .day {
