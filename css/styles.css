@@ -52,6 +52,12 @@ body {
     margin: auto;
 }
 
+iframe{
+    border: none;
+    width: 100%;
+    height: 80vh;
+}
+
 .calendar-header {
     display: flex;
     justify-content: space-between;
