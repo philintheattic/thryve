@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" href="static/icon-192.jpg">
     <link rel="manifest" href="manifest.json">
     <script defer src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         /* Base Styles */
 :root {
@@ -60,7 +61,7 @@ body {
 }
 
 /* Card Container Styles */
-.calendar-container, .output-container {
+.calendar-container, .output-container , .card{
     background-color: var(--card-bg);
     border-radius: var(--border-radius);
     padding: 20px;
@@ -208,7 +209,7 @@ body {
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(108, 92, 231, 0.4);
     position: fixed;
-    bottom: 30px;
+    bottom: 80px;
     right: 30px;
     z-index: 10;
     display: flex;
@@ -472,6 +473,7 @@ input[type="checkbox"] {
     display: flex;
     justify-content: space-around;
     padding: 10px 0;
+    padding-bottom: 34px; /* margin for iphone rounded corners*/
 }
 
 .tab-button {
@@ -506,6 +508,11 @@ input[type="checkbox"] {
 
 .hidden {
     display: none;
+}
+
+#stats-tab, #settings-tab{
+    padding: 0 12px;
+    margin: 0 auto;
 }
 
 /* Responsive adjustments */
@@ -557,6 +564,7 @@ input[type="checkbox"] {
                     <!-- Checked items will be displayed here -->
                 </div>
             </div>
+            
         </div>
     </div>
     
@@ -603,12 +611,17 @@ input[type="checkbox"] {
     </div>
 
     <div id="stats-tab" class="tab-content">
-        <h2>Pain Level Over Time</h2>
-        <canvas id ="painChart"></canvas>
+        <div class="card">
+            <h2>Statistiken</h2>
+            <canvas id ="test-chart"></canvas>
+        </div>
     </div>
 
     <div id="settings-tab" class="tab-content">
-        Hier sind Settings
+        <div class="card">
+            <h2>Settings</h2>
+            <p>Hier kommen die Einstellungen.</p>
+        </div>
     </div>
 
     <!-- NAVBAR -->

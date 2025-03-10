@@ -7,8 +7,13 @@ if ('serviceWorker' in navigator) {
     });
   }
 
-// Navbar Functionality
+// Get some CSS variables
+const primaryColor = window.getComputedStyle(document.documentElement).getPropertyValue("--primary-color");
+const secondaryColor = window.getComputedStyle(document.documentElement).getPropertyValue("--secondary-color");
+const lightBg = window.getComputedStyle(document.documentElement).getPropertyValue("--light-bg");
+const cardBg = window.getComputedStyle(document.documentElement).getPropertyValue("--card-bg");
 
+// Navbar Functionality
 function switchTab(tab) {
     const allTabs = document.querySelectorAll(".tab-content");
     const selectedTab = document.getElementById(`${tab}-tab`);
@@ -45,3 +50,26 @@ document.addEventListener("DOMContentLoaded", () => {
     switchTab('tracking');
 });
 
+
+// Chart.js functionality
+const ctx = document.getElementById("test-chart");
+
+new Chart(ctx, {
+    type: "bar",
+    data: {
+        labels: ["test1", "blablabla", "anotherOne"],
+        datasets: [{
+            label: "amount of something",
+            data: [1, 12, 17, 8],
+            backgroundColor: primaryColor,
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
