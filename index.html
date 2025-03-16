@@ -6,8 +6,13 @@
     <title>Thryve</title>
     <link rel="icon" type="image/png" href="static/icon-192.jpg">
     <link rel="manifest" href="manifest.json">
-    <script defer src="js/script.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- <script src="js/index_code.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/stats.js"></script> -->
+
     <style>
         /* Base Styles */
 :root {
@@ -511,7 +516,6 @@ input[type="checkbox"] {
 }
 
 #stats-tab, #settings-tab{
-    padding: 0 12px;
     margin: 0 auto;
 }
 
@@ -566,6 +570,29 @@ input[type="checkbox"] {
             </div>
             
         </div>
+
+        <div id="stats-tab" class="tab-content">
+            
+            <div class="card">
+                <h2>Symptome</h2>
+                <canvas id="statistics-chart"></canvas>
+                <button id="show-week" class="save-btn">7 Tage</button>
+                <button id="show-month" class="save-btn">30 Tage</button>
+            </div>
+
+            <div class="card">
+                <h2>Stats 2</h2>
+                <canvas id="test-chart"></canvas>
+            </div>
+        </div>
+    
+        <div id="settings-tab" class="tab-content">
+            <div class="card">
+                <h2>Settings</h2>
+                <p>Hier kommen die Einstellungen.</p>
+            </div>
+        </div>
+
     </div>
     
     <button class="add-btn" id="add-btn">+</button>
@@ -610,19 +637,7 @@ input[type="checkbox"] {
         <button class="save-btn" id="save-btn">Save</button>
     </div>
 
-    <div id="stats-tab" class="tab-content">
-        <div class="card">
-            <h2>Statistiken</h2>
-            <canvas id ="test-chart"></canvas>
-        </div>
-    </div>
-
-    <div id="settings-tab" class="tab-content">
-        <div class="card">
-            <h2>Settings</h2>
-            <p>Hier kommen die Einstellungen.</p>
-        </div>
-    </div>
+    
 
     <!-- NAVBAR -->
     <div id="tab-bar">
@@ -631,7 +646,7 @@ input[type="checkbox"] {
         <button class="tab-button" onclick="switchTab('settings')">Settings</button>
     </div>
 
-    <script>
+    <!-- <script>
         document.addEventListener('DOMContentLoaded', () => {
             // DOM Elements
             const calendar = document.querySelector('.calendar');
@@ -954,6 +969,11 @@ input[type="checkbox"] {
                 }
             }
         });
-    </script>
+    </script> -->
+    <!-- <script src="js/defaults.js"></script> -->
+    <script src="js/stats.js"></script>
+    <script src="js/index_code.js"></script>
+    <script src="js/script.js"></script>
+    
 </body>
 </html>

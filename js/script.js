@@ -7,11 +7,6 @@ if ('serviceWorker' in navigator) {
     });
   }
 
-// Get some CSS variables
-const primaryColor = window.getComputedStyle(document.documentElement).getPropertyValue("--primary-color");
-const secondaryColor = window.getComputedStyle(document.documentElement).getPropertyValue("--secondary-color");
-const lightBg = window.getComputedStyle(document.documentElement).getPropertyValue("--light-bg");
-const cardBg = window.getComputedStyle(document.documentElement).getPropertyValue("--card-bg");
 
 // Navbar Functionality
 function switchTab(tab) {
